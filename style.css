@@ -161,7 +161,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 50%;
   font-weight: initial;
   font-family: sans-serif;
 }
@@ -312,4 +312,10 @@ body {
   justify-content: center;
   align-items: center;
   object-fit: cover;
+}
+
+#project-div {
+  height: 100vh;
+  background: #000;
+  max-width: (100%, 600px);
 }
