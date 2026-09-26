@@ -1,43 +1,40 @@
-let initialPath = "M 10 100 Q 400 100 790 100";
-
-let finalPath = "M 300 100 Q 400 100 952 100";
-
+// PROJECT MAPPED SECTION
 const projects = [
   {
-    title: "Backend Ledger",
+    title: "Full-Stack Notes App",
     description:
-      "A backend ledger project for organizing records and tracking transactions.",
-    url: "https://github.com/Pushkarjha21/Backen-ledger",
-  },
-  {
-    title: "LISTORA-React Shopping App",
-    description:
-      "A React shopping app for browsing products, filtering and sorting results, and managing a cart.",
-    url: "https://github.com/Pushkarjha21/product-filter-app",
-  },
-  {
-    title: "Endless loopHole",
-    description:
-      "An interactive web experience built around a continuously looping concept.",
-    url: "https://github.com/Pushkarjha21/Loophole",
-  },
-  {
-    title: "Weather Dashboard",
-    description:
-      "A weather dashboard for checking current conditions and forecast information.",
-    url: "https://github.com/Pushkarjha21/weather",
-  },
-  {
-    title: "Notes App",
-    description:
-      "A lightweight notes app for creating, editing, and organizing notes.",
+      "Built a complete notes application with backend support for creating, updating, deleting, and managing notes efficiently. The project showcases CRUD functionality and real-world web app structure.",
     url: "https://github.com/Pushkarjha21/Notes-app-",
   },
   {
-    title: "CODE COURT - A github PR review",
+    title: "Bank Transaction Ledger",
     description:
-      "A GitHub pull request review project for inspecting code changes and supporting reviews.",
+      "Developed a backend-driven ledger system for managing financial transactions, tracking balances, and analyzing transaction flow. This project highlights data handling and logic-based problem solving.",
+    url: "https://github.com/Pushkarjha21/Backen-ledger",
+  },
+  {
+    title: "Weather App",
+    description:
+      "Created a responsive weather app that fetches live weather information for different locations using API integration. The project demonstrates frontend design, data presentation, and user-friendly UI.",
+    url: "https://github.com/Pushkarjha21/weather",
+  },
+  {
+    title: "Listora – Product Filter App",
+    description:
+      "Built an e-commerce-style product listing app with login, routing, wishlist functionality, category filters, sorting, and a custom 404 page. This project reflects strong frontend architecture and user flow design.",
+    url: "https://github.com/Pushkarjha21/product-filter-app",
+  },
+  {
+    title: "Code Court – GitHub PR Solution Project",
+    description:
+      "Designed a project focused on understanding GitHub pull request issues and suggesting practical fixes. It demonstrates debugging ability, code review thinking, and problem-solving skills.",
     url: "https://github.com/Pushkarjha21/GitHub-PR-Review",
+  },
+  {
+    title: "Loopholes Project",
+    description:
+      "Built a logic-driven project to analyze system weaknesses and explore practical solutions. This project reflects analytical thinking and a problem-solving mindset in software development.",
+    url: "https://github.com/Pushkarjha21/Loophole",
   },
 ];
 
@@ -56,9 +53,13 @@ if (projectList) {
     .join("");
 }
 
+// GSAP ANIMATION SECTION
 let string = document.querySelector("#string svg");
 const video = document.querySelector(".scroll-video");
 const container = document.querySelector("#pikku");
+let initialPath = "M 10 100 Q 400 100 790 100";
+
+let finalPath = "M 300 100 Q 400 100 952 100";
 
 gsap.registerPlugin(ScrollTrigger);
 string.addEventListener("mousemove", (dets) => {
@@ -163,6 +164,8 @@ gsap.from("#about", {
     scrub: true,
   },
 });
+
+//CANVAS SECTION BACKGROUND
 const TWO_PI = Math.PI * 2;
 const DEFAULT_IMAGES = [
   {
