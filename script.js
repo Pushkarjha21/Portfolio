@@ -2,6 +2,60 @@ let initialPath = "M 10 100 Q 400 100 790 100";
 
 let finalPath = "M 300 100 Q 400 100 952 100";
 
+const projects = [
+  {
+    title: "Backend Ledger",
+    description:
+      "A backend ledger project for organizing records and tracking transactions.",
+    url: "https://github.com/Pushkarjha21/Backen-ledger",
+  },
+  {
+    title: "LISTORA-React Shopping App",
+    description:
+      "A React shopping app for browsing products, filtering and sorting results, and managing a cart.",
+    url: "https://github.com/Pushkarjha21/product-filter-app",
+  },
+  {
+    title: "Endless loopHole",
+    description:
+      "An interactive web experience built around a continuously looping concept.",
+    url: "https://github.com/Pushkarjha21/Loophole",
+  },
+  {
+    title: "Weather Dashboard",
+    description:
+      "A weather dashboard for checking current conditions and forecast information.",
+    url: "https://github.com/Pushkarjha21/weather",
+  },
+  {
+    title: "Notes App",
+    description:
+      "A lightweight notes app for creating, editing, and organizing notes.",
+    url: "https://github.com/Pushkarjha21/Notes-app-",
+  },
+  {
+    title: "CODE COURT - A github PR review",
+    description:
+      "A GitHub pull request review project for inspecting code changes and supporting reviews.",
+    url: "https://github.com/Pushkarjha21/GitHub-PR-Review",
+  },
+];
+
+const projectList = document.querySelector("#project-list");
+if (projectList) {
+  projectList.innerHTML = projects
+    .map(
+      ({ title, description, url }) => `
+        <article class="project-card">
+          <h2>${title}</h2>
+          <p>${description}</p>
+          <a href="${url}" target="_blank" rel="noopener noreferrer">View project</a>
+        </article>
+      `,
+    )
+    .join("");
+}
+
 let string = document.querySelector("#string svg");
 const video = document.querySelector(".scroll-video");
 const container = document.querySelector("#pikku");

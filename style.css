@@ -315,7 +315,108 @@ body {
 }
 
 #project-div {
-  height: 100vh;
-  background: #000;
-  max-width: (100%, 600px);
+  --project-accent: #5fd4ff;
+  min-height: 55vh;
+  padding: 72px max(24px, 8vw);
+  color: #f4f7f7;
+  font-family: monospace;
+  background-color: #000;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  /* border-top: 1px solid rgba(95, 212, 255, 0.22); */
+}
+
+#project-div h1 {
+  width: fit-content;
+  margin: 0 auto 32px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--project-accent);
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: 16px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.project-card {
+  position: relative;
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid #293436;
+  border-radius: 5px;
+  background: rgba(16, 23, 24, 0.94);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.project-card::before {
+  position: absolute;
+  top: -1px;
+  left: 22px;
+  width: 42px;
+  height: 3px;
+  background: var(--project-accent);
+  content: "";
+}
+
+.project-card h2 {
+  max-width: 85%;
+  color: #fff;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.project-card p {
+  color: #b9c4c5;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+  line-height: 1.6;
+}
+
+.project-card a {
+  margin-top: auto;
+  color: var(--project-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-card a::after {
+  content: " ->";
+}
+
+.project-card a:hover,
+.project-card a:focus-visible {
+  text-decoration: underline;
+}
+
+.project-card a:focus-visible {
+  outline: 2px solid var(--project-accent);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(95, 212, 255, 0.65);
+    background-color: #131d1f;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: none;
+  }
 }
